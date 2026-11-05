@@ -3,8 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import FooterText from "./FooterText";
+import { ChevronUp } from "lucide-react";
 
-export default function Footer() {
+export default function   Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -135,14 +136,7 @@ export default function Footer() {
             className="w-14 h-14 rounded-full bg-[#460647] flex items-center justify-center flex-shrink-0 transition-transform hover:-translate-y-1 active:translate-y-0"
             aria-label="Scroll to top"
           >
-            <Image
-              src="https://api.iconify.design/material-symbols:keyboard-arrow-up.svg?color=%23ffffff"
-              alt="Scroll to top"
-              width={32}
-              height={32}
-              className="w-8 h-8"
-              unoptimized
-            />
+            <ChevronUp className="w-6 h-6 text-white" />
           </button>
 
           <div className="flex flex-col items-center md:mt-20 gap-4">
