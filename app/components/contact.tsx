@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Phone, Mail, Clock, Lock, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -9,23 +8,68 @@ import Link from "next/link";
 const socialLinks = [
   {
     id: "zillow",
-    src: "https://api.iconify.design/simple-icons:zillow.svg?color=%23E46A52",
     alt: "Zillow",
     url: "https://www.zillow.com/lender-profile/ShaynCarlson/",
   },
   {
     id: "gmail",
-    src: "https://api.iconify.design/simple-icons:gmail.svg?color=%23E46A52",
     alt: "Gmail",
     url: "mailto:shaync@fairwaymc.com",
   },
   {
     id: "phone",
-    src: "https://api.iconify.design/solar:phone-bold.svg?color=%23E46A52",
     alt: "Phone",
     url: "tel:+12088664515",
   },
-];
+] as const;
+
+function ZillowIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M499.6 166.6 256 6.7 12.4 166.6c-3.4 2.2-4.3 6.8-2.1 10.2.9 1.4 2.2 2.5 3.7 3.1l35.1 13.4v309.3c0 3.3 2.7 6 6 6h401.8c3.3 0 6-2.7 6-6V193.3l35.1-13.4c3.7-1.4 5.6-5.6 4.2-9.3-.6-1.6-1.7-2.9-3.2-3.8h-.4zM343.6 432.3h-67.3v-97.7c0-9-7.3-16.3-16.3-16.3h-8c-9 0-16.3 7.3-16.3 16.3v97.7h-67.3V298.5c0-6.8 3.8-13 9.8-16.1l69.8-36.2c5.3-2.8 11.7-2.8 17 0l69.8 36.2c6 3.1 9.8 9.3 9.8 16.1v133.8z" />
+    </svg>
+  );
+}
+
+function GmailIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+    </svg>
+  );
+}
+
+function PhoneIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+    </svg>
+  );
+}
+
+const iconMap = {
+  zillow: ZillowIcon,
+  gmail: GmailIcon,
+  phone: PhoneIcon,
+} as const;
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -236,25 +280,22 @@ This inquiry was sent from the Shayn Carlson Mortgage website.`,
                 Follow &amp; Connect
               </h3>
               <div className="flex flex-wrap gap-3">
-                {socialLinks.map((icon) => (
-                  <a
-                    key={icon.id}
-                    href={icon.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-gray-400 bg-white flex items-center justify-center hover:bg-[#460647] transition group"
-                    aria-label={icon.alt}
-                  >
-                    <Image
-                      src={icon.src}
-                      alt={icon.alt}
-                      width={18}
-                      height={18}
-                      className="w-4 h-4 group-hover:brightness-0 group-hover:invert transition-all"
-                      unoptimized
-                    />
-                  </a>
-                ))}
+                {socialLinks.map((icon) => {
+                  const Icon = iconMap[icon.id];
+                  const isExternal = icon.url.startsWith("http");
+                  return (
+                    <a
+                      key={icon.id}
+                      href={icon.url}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noopener noreferrer" : undefined}
+                      className="w-10 h-10 rounded-full border border-gray-400 bg-white flex items-center justify-center text-[#460647] hover:bg-[#460647] hover:text-white transition group"
+                      aria-label={icon.alt}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
