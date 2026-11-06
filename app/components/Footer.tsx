@@ -90,43 +90,40 @@ export default function   Footer() {
               Boise, ID 83714
             </a>
           </p>
-          {/* Social Links Row */}
-          <div className="flex gap-3 mb-6">
-            {[
-              {
-                src: "https://cdn.simpleicons.org/zillow/white",
-                alt: "Zillow",
-                href: "https://www.zillow.com/lender-profile/ShaynCarlson/",
-              },
-              {
-                src: "https://cdn.simpleicons.org/gmail/white",
-                alt: "Gmail",
-                href: "mailto:shaync@fairwaymc.com",
-              },
-              {
-                src: "https://api.iconify.design/solar:phone-bold.svg?color=%23ffffff",
-                alt: "Phone",
-                href: "tel:+12088664515",
-              },
-            ].map(({ src, alt, href }) => (
-              <Link
-                key={alt}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center flex-shrink-0 hover:bg-gray-500 transition-colors"
-              >
-                <Image
-                  src={src}
-                  alt={alt}
-                  width={20}
-                  height={20}
-                  className="w-5 h-5"
-                  unoptimized
-                />
-              </Link>
-            ))}
-          </div>
+
+<div className="flex gap-3 mb-6">
+  {[
+    {
+      src: "https://cdn.simpleicons.org/zillow/white",
+      alt: "Zillow",
+      href: "https://www.zillow.com/lender-profile/ShaynCarlson/",
+    },
+    {
+      src: "https://cdn.simpleicons.org/gmail/white",
+      alt: "Gmail",
+      href: "mailto:shaync@fairwaymc.com",
+    },
+    
+  ].map(({ src, alt, href }) => (
+    <Link
+      key={alt}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center flex-shrink-0 hover:bg-gray-500 transition-colors"
+      aria-label={alt}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={20}
+        height={20}
+        className="w-5 h-5"
+        unoptimized
+      />
+    </Link>
+  ))}
+</div>
         </div>
 
         {/* Logo + Compliance Logos + Scroll-to-top Column */}
@@ -157,7 +154,7 @@ export default function   Footer() {
               aria-label="NMLS Consumer Access"
             >
               <Image
-                src="/img/nmls-consumer-access.png"
+                src="/img/logo.png"
                 alt="NMLS Consumer Access"
                 width={120}
                 height={40}
@@ -168,7 +165,7 @@ export default function   Footer() {
 
             {/* Equal Housing Opportunity Logo */}
             <Image
-              src="/img/equal-housing-logo.png"
+              src="/img/logo.png"
               alt="Equal Housing Opportunity"
               width={80}
               height={80}

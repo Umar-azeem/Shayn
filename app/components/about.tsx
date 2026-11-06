@@ -313,11 +313,7 @@ export default function AboutPage() {
               pay and your projected principal balances. You can also input
               prepayment amounts to see their impact on your mortgage.
             </p>
-            <Link href="/calculator">
-              <button className="bg-[#460647] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#f36f55] transition">
-                Try Our Mortgage Calculator
-              </button>
-            </Link>
+           
           </div>
         </section>
 

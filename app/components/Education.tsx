@@ -40,7 +40,7 @@ const loanProducts: LoanProduct[] = [
     icon: <Shield className="w-6 h-6" />,
   },
   {
-    id: "/loan-programs?program=DPA",
+    id: "/loan-programs?program=dpa",
     title: "DPA Loans",
     description:
       "A Down Payment Assistance (DPA) loan helps cover a portion of the down payment on a home.",
@@ -60,21 +60,21 @@ const loanProducts: LoanProduct[] = [
     icon: <RefreshCw className="w-6 h-6" />,
   },
   {
-    id: "/loan-programs?program=Non-QM",
+    id: "/loan-programs?program=non-qm",
     title: "Non-QM",
     description:
       "A Non-QM loan, or Non-Qualified Mortgage loan, is a type of mortgage loan that does not meet the standards set by the government-sponsored.",
     icon: <Landmark className="w-6 h-6" />,
   },
   {
-    id: "/loan-programs?program=Rehab",
+    id: "/loan-programs?program=rehab",
     title: "Rehab Loans",
     description:
       "A rehab loan, also known as a renovation loan, is a type of loan used to finance the purchase and renovation of a property",
     icon: <BarChart3 className="w-6 h-6" />,
   },
   {
-    id: "/loan-programs?program=USDA",
+    id: "/loan-programs?program=usda",
     title: "USDA Loans",
     description:
       "USDA loans are designed to help low- and moderate-income individuals and families buy homes in rural areas.",

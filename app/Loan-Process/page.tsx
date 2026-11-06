@@ -42,22 +42,7 @@ export default function LoanProcessPage() {
               <p className="text-base sm:text-xl md:text-2xl text-white/80 font-light mb-6 sm:mb-8">
                 Below are the steps to secure a loan
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                <Link
-                  href="https://wa.me/19047351895"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-[#460647] px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl font-semibold hover:bg-gray-100 transition-transform hover:-translate-y-1 shadow-lg text-sm sm:text-base"
-                >
-                  Apply Now
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                </Link>
-                <Link
-                  href="/contact-us"
-                  className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl font-semibold hover:bg-white/30 transition-transform hover:-translate-y-1 border border-white/30 text-sm sm:text-base"
-                >
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Contact Us
-                </Link>
-              </div>
+             
             </div>
             <div className="hidden md:block relative h-64 sm:h-80 lg:h-96 w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
@@ -414,22 +399,6 @@ export default function LoanProcessPage() {
               Contact one of our experienced Loan Officers today to discuss your
               particular mortgage needs.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mt-4 sm:mt-4">
-              <Link
-                href="/apply"
-                className="inline-flex items-center justify-center gap-2 bg-[#460647] text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl font-semibold hover:bg-[#460647] transition-transform hover:-translate-y-1 shadow-lg text-sm sm:text-base"
-              >
-                Apply Online
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#460647] px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl font-semibold border border-[#460647]/30 hover:bg-gray-50 transition-transform hover:-translate-y-1 text-sm sm:text-base"
-              >
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                Schedule Consultation
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -449,22 +418,7 @@ export default function LoanProcessPage() {
               Get pre-qualified today and take the first step toward
               homeownership.
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
-              <Link
-                href="/apply"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#460647] px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold hover:bg-gray-100 transition-transform hover:-translate-y-1 shadow-xl text-sm sm:text-base"
-              >
-                Apply Now
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold hover:bg-white/30 transition-transform hover:-translate-y-1 border border-white/30 text-sm sm:text-base"
-              >
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                Call Us
-              </Link>
-            </div>
+            
           </div>
         </div>
       </section>

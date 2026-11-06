@@ -236,7 +236,7 @@ export const loanPrograms: LoanProgram[] = [
       }
     ],
     ctaText: "Learn More About DPA",
-    ctaLink: "/contact"
+    ctaLink: "/contact-us"
   },
   {
     id: "jumbo",
@@ -584,7 +584,7 @@ export const loanPrograms: LoanProgram[] = [
       }
     ],
     ctaText: "Learn More About Rehab Loans",
-    ctaLink: "/contact"
+    ctaLink: "/contact-us"
   },
   {
     id: "usda",
@@ -654,7 +654,7 @@ export const loanPrograms: LoanProgram[] = [
       }
     ],
     ctaText: "Check USDA Eligibility",
-    ctaLink: "/contact"
+    ctaLink: "/contact-us"
   },
   {
     id: "arm",
